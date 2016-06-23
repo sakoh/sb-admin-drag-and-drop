@@ -1,4 +1,4 @@
-var gulp = require('gulp'),
+const gulp = require('gulp'),
     sass = require('gulp-sass'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
@@ -8,7 +8,7 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     browserSync = require('browser-sync').create();
 
-var paths = {
+const paths = {
     source: {
         sass: 'sass/**/*.scss',
         fonts: [
@@ -43,7 +43,7 @@ var paths = {
     }
 };
 
-gulp.task('watch', ['compile'], function () {
+gulp.task('watch', ['compile'], () => {
     browserSync.init({
         server: {
             baseDir: "./"
@@ -56,57 +56,58 @@ gulp.task('watch', ['compile'], function () {
     gulp.watch("pages/*.html").on('change', browserSync.reload);
 });
 
-gulp.task('sass', function () {
-    return gulp.src(paths.source.sass)
+gulp.task('sass', () => (
+    gulp.src(paths.source.sass)
         .pipe(sass())
         .pipe(gulp.dest(paths.dest.styles))
-        .pipe(browserSync.stream());
-});
+        .pipe(browserSync.stream())
+));
 
-gulp.task('sass:minify', ['sass'], function() {
-    return gulp.src(paths.dest + '/sb-admin-2.css')
+gulp.task('sass:minify', ['sass'], () => (
+    gulp.src(paths.dest + '/sb-admin-2.css')
         .pipe(rename({
             extname: '.min.css'
         }))
         .pipe(minifyCss())
-        .pipe(gulp.dest(paths.dest.styles));
-});
+        .pipe(gulp.dest(paths.dest.styles))
+));
 
-gulp.task('fonts', function() {
-    return gulp.src(paths.source.fonts)
+gulp.task('fonts', () => (
+    gulp.src(paths.source.fonts)
         .pipe(gulp.dest(paths.dest.fonts))
-});
+));
 
-gulp.task('images', function() {
-    return gulp.src(paths.source.images)
+gulp.task('images', () => (
+    gulp.src(paths.source.images)
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()]
         }))
-        .pipe(gulp.dest(paths.dest.images));
-});
+        .pipe(gulp.dest(paths.dest.images))
+));
 
-gulp.task('scripts', function () {
-    return gulp.src(paths.source.scripts)
+gulp.task('scripts', () => (
+    gulp.src(paths.source.scripts)
         .pipe(concat('admin.js'))
         .pipe(gulp.dest(paths.dest.scripts))
-});
+));
 
 gulp.task('scripts:watch',['scripts'],browserSync.reload);
 
-gulp.task('scripts:uglify',['scripts'], function () {
-    return gulp.src(paths.dest.scripts + '/admin.js')
+gulp.task('scripts:uglify',['scripts'], () => (
+    gulp.src(paths.dest.scripts + '/admin.js')
         .pipe(rename({
             extname: '.min.js'
         }))
         .pipe(uglify())
-        .pipe(gulp.dest(paths.dest.scripts));
+        .pipe(gulp.dest(paths.dest.scripts))
+));
+
+gulp.task('compile',['sass','fonts','images','scripts'], () => {
+
 });
 
-gulp.task('compile',['sass','fonts','images','scripts'], function() {
-
-});
-gulp.task('compile:dist',['sass:minify','fonts','images','scripts:uglify'], function() {
+gulp.task('compile:dist',['sass:minify','fonts','images','scripts:uglify'], () => {
 
 });
