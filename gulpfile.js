@@ -6,7 +6,9 @@ const gulp = require('gulp'),
     minifyCss = require('gulp-minify-css'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
-    browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync').create(),
+    handlebars = require('gulp-compile-handlebars'),
+    del = require('del');
 
 const paths = {
     source: {
@@ -33,7 +35,27 @@ const paths = {
             'bower_components/datatables/media/js/jquery.dataTables.js',
             'bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js',
             'js/admin.js'
-        ]
+        ],
+        handlebars: {
+          options: {
+            ignorePartials: false, //ignores the unknown footer2 partial in the handlebars template, defaults to false
+		        // partials : {
+			      //   nav : './handlebars/partials/nav.hbs'
+		        // },
+            batch : ['./handlebars/partials'],
+		        helpers : {
+		        	capitals(str) {
+		        		return str.toUpperCase();
+		        	}
+		        }
+          },
+          data: {
+		        firstName: 'Kaanon'
+	        },
+          src: './handlebars/index.hbs',
+          dest: '.',
+          newName: 'index.html'
+        }
     },
     dest: {
         styles: 'dist/css',
@@ -104,10 +126,15 @@ gulp.task('scripts:uglify',['scripts'], () => (
         .pipe(gulp.dest(paths.dest.scripts))
 ));
 
-gulp.task('compile',['sass','fonts','images','scripts'], () => {
+gulp.task('handlebars', () => {
+    const hbs = paths.source.handlebars;
 
+    return gulp.src(hbs.src)
+               .pipe(handlebars(hbs.data, hbs.options))
+               .pipe(rename(hbs.newName))
+               .pipe(gulp.dest(hbs.dest));
 });
 
-gulp.task('compile:dist',['sass:minify','fonts','images','scripts:uglify'], () => {
+gulp.task('compile',['sass','fonts','images','scripts']);
 
-});
+gulp.task('compile:dist',['sass:minify','fonts','images','scripts:uglify']);
