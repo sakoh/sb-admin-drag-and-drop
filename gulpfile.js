@@ -135,6 +135,6 @@ gulp.task('handlebars', () => {
                .pipe(gulp.dest(hbs.dest));
 });
 
-gulp.task('compile',['sass','fonts','images','scripts']);
+gulp.task('compile',['sass', 'fonts','images','scripts']);
 
-gulp.task('compile:dist',['sass:minify','fonts','images','scripts:uglify']);
+gulp.task('compile:dist',['sass:minify', 'handlebars', 'fonts','images','scripts:uglify']);
