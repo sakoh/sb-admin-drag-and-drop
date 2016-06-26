@@ -1,0 +1,46 @@
+{
+    "source": {
+        "sass": "sass/**/*.scss",
+        "fonts": [
+            "bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*.{eot,svg,ttf,woff,woff2}",
+            "bower_components/font-awesome/fonts/*.{eot,svg,ttf,woff,woff2}"
+        ],
+        "images":[
+            "bower_components/datatables-plugins/integration/bootstrap/images/*.{jpg,png}"
+        ],
+        "scripts": [
+            "bower_components/jquery/dist/jquery.js",
+            "bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js",
+            "bower_components/metisMenu/dist/metisMenu.js",
+            "bower_components/raphael/raphael.js",
+            "bower_components/morrisjs/morris.js",
+            "bower_components/flot/excanvas.js",
+            "bower_components/flot/jquery.flot.js",
+            "bower_components/flot/jquery.flot.pie.js",
+            "bower_components/flot/jquery.flot.resize.js",
+            "bower_components/flot/jquery.flot.time.js",
+            "bower_components/flot.tooltip/js/jquery.flot.tooltip.js",
+            "bower_components/datatables/media/js/jquery.dataTables.js",
+            "bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js",
+            "js/admin.js"
+        ],
+        "handlebars": {
+          "options": {
+            "ignorePartials": false,
+            "batch" : ["./handlebars/partials"]
+          },
+          "data": {
+		        "firstName": "Kaanon"
+	        },
+          "src": "./handlebars/index.hbs",
+          "dest": ".",
+          "newName": "index.html"
+        }
+    },
+    "dest": {
+        "styles": "dist/css",
+        "fonts": "dist/fonts",
+        "images": "dist/images",
+        "scripts": "dist/js"
+    }
+}
