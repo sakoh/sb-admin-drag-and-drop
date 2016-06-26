@@ -74,5 +74,35 @@
       "time":"2:13 PM",
       "amount":"$943.45"
     }
+  ],
+  "messages":[
+    {
+      "align":"left",
+      "img":"http://placehold.it/50/55C1E7/fff",
+      "author":"Jack Sparrow",
+      "time":"12 mins ago",
+      "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales."
+    },
+    {
+      "align":"right",
+      "img":"http://placehold.it/50/FA6F57/fff",
+      "author":"Bhaumik Patel",
+      "time":"13 mins ago",
+      "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales."
+    },
+    {
+      "align":"left",
+      "img":"http://placehold.it/50/55C1E7/fff",
+      "author":"Jack Sparrow",
+      "time":"14 mins ago",
+      "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales."
+    },
+    {
+      "align":"right",
+      "img":"http://placehold.it/50/FA6F57/fff",
+      "author":"Bhaumik Patel",
+      "time":"15 mins ago",
+      "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales."
+    }
   ]
 }
