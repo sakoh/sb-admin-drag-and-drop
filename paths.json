@@ -27,7 +27,8 @@
         "handlebars": {
           "options": {
             "ignorePartials": false,
-            "batch" : ["./handlebars/partials"]
+            "batch" : ["./handlebars/partials"],
+            "helpers":{}
           },
           "src": "./handlebars/index.hbs",
           "dest": ".",

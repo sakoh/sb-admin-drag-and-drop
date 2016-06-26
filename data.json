@@ -1,142 +1,227 @@
 {
-  "panel_boxes": [
-    {
-      "title": "New Comments!",
-      "count": 26,
-      "bg_class":"panel-primary",
-      "icon_class":"fa-comments"
-    },
-    {
-      "title": "New Tasks!",
-      "count": 12,
-      "bg_class":"panel-green",
-      "icon_class":"fa-tasks"
-    },
-    {
-      "title": "New Orders!",
-      "count": 124,
-      "bg_class":"panel-yellow",
-      "icon_class":"fa-shopping-cart"
-    },
-    {
-      "title": "Support Tickets!",
-      "count": 13,
-      "bg_class":"panel-red",
-      "icon_class":"fa-support"
+    "panel_boxes": [
+        {
+            "title": "New Comments!",
+            "count": 26,
+            "bg_class":"panel-primary",
+            "icon_class":"fa-comments"
+        },
+        {
+            "title": "New Tasks!",
+            "count": 12,
+            "bg_class":"panel-green",
+            "icon_class":"fa-tasks"
+        },
+        {
+            "title": "New Orders!",
+            "count": 124,
+            "bg_class":"panel-yellow",
+            "icon_class":"fa-shopping-cart"
+        },
+        {
+            "title": "Support Tickets!",
+            "count": 13,
+            "bg_class":"panel-red",
+            "icon_class":"fa-support"
+        }
+    ],
+    "timesheet": [
+        {
+            "id":3326,
+            "date":"10/21/2013",
+            "time":"3:29 PM",
+            "amount":"$321.33"
+        },
+        {
+            "id":3325,
+            "date":"10/21/2013",
+            "time":"3:20 PM",
+            "amount":"$234.34"
+        },
+        {
+            "id":3324,
+            "date":"10/21/2013",
+            "time":"3:03 PM",
+            "amount":"$724.17"
+        },
+        {
+            "id":3323,
+            "date":"10/21/2013",
+            "time":"3:00 PM",
+            "amount":"$23.71"
+        },
+        {
+            "id":3322,
+            "date":"10/21/2013",
+            "time":"2:49 PM",
+            "amount":"$8345.23"
+        },
+        {
+            "id":3321,
+            "date":"10/21/2013",
+            "time":"2:23 PM",
+            "amount":"$245.12"
+        },
+        {
+            "id":3320,
+            "date":"10/21/2013",
+            "time":"2:15 PM",
+            "amount":"$5663.54"
+        },
+        {
+            "id":3319,
+            "date":"10/21/2013",
+            "time":"2:13 PM",
+            "amount":"$943.45"
+        }
+    ],
+    "messages":[
+        {
+            "align":"left",
+            "img":"http://placehold.it/50/55C1E7/fff",
+            "author":"Jack Sparrow",
+            "time":"12 mins ago",
+            "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales."
+        },
+        {
+            "align":"right",
+            "img":"http://placehold.it/50/FA6F57/fff",
+            "author":"Bhaumik Patel",
+            "time":"13 mins ago",
+            "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales."
+        },
+        {
+            "align":"left",
+            "img":"http://placehold.it/50/55C1E7/fff",
+            "author":"Jack Sparrow",
+            "time":"14 mins ago",
+            "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales."
+        },
+        {
+            "align":"right",
+            "img":"http://placehold.it/50/FA6F57/fff",
+            "author":"Bhaumik Patel",
+            "time":"15 mins ago",
+            "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales."
+        }
+    ],
+    "sidebar":[
+        {
+            "title":"Dashboard",
+            "icon":"fa-dashboard"
+        },
+        {
+            "title":"Charts",
+            "icon":"fa-bar-chart-o",
+            "dropdown":[
+                "Flot Charts",
+                "Morris.js Charts"
+            ]
+        },
+        {
+            "title":"Tables",
+            "icon":"fa-table"
+        },
+        {
+            "title":"Forms",
+            "icon":"fa-edit"
+        },
+        {
+            "title":"UI Elements",
+            "icon":"fa-wrench",
+            "dropdown":[
+                "Panels and Wells",
+                "Buttons",
+                "Notifications",
+                "Typography",
+                "Icons",
+                "Grid"
+            ]
+        }
+    ],
+    "nav":{
+        "messages":[
+            {
+                "author": "John Smith",
+                "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend..."
+            },
+            {
+                "author": "Lawrence Taylor",
+                "body":"Sed pellentesque mi at diam condimentum semper. Nam enim massa..."
+            },
+            {
+                "author": "James West",
+                "body":"Nullam a odio orci. Duis consequat dui eu arcu imperdiet ultrices."
+            },
+            {
+                "author": "Margaret Booth",
+                "body":"Aenean blandit velit massa, sed porta  eros consequat vitae."
+            }
+        ],
+        "tasks":[
+            {
+                "id": 1,
+                "percent": 40,
+                "status": "success"
+            },
+            {
+                "id": 2,
+                "percent": 20,
+                "status": "info"
+            },
+            {
+                "id": 3,
+                "percent": 60,
+                "status": "warning"
+            },
+            {
+                "id": 4,
+                "percent": 80,
+                "status": "danger"
+            }
+
+        ],
+        "notifications":[
+            {
+                "title": "New Comment",
+                "icon": "fa-comment",
+                "time": "4 minutes ago"
+            },
+            {
+                "title": "3 New Followers",
+                "icon": "fa-twitter",
+                "time": "12 minutes ago"
+            },
+            {
+                "title": "Message sent",
+                "icon": "fa-envelope",
+                "time": "20 minutes ago"
+            },
+            {
+                "title": "New Task",
+                "icon": "fa-tasks",
+                "time": "23 minutes ago"
+            },
+            {
+                "title": "Server Rebooted",
+                "icon": "fa-upload",
+                "time": "30 minutes ago"
+            }
+        ],
+        "profile_options":[
+            {
+                "title":"User Profile",
+                "icon":"fa-user"
+            },
+            {
+                "title":"Settings",
+                "icon":"fa-gear"
+            },
+            {
+                "title":"Logout",
+                "icon":"fa-sign-out"
+            }
+        ]
     }
-  ],
-  "timesheet": [
-    {
-      "id":3326,
-      "date":"10/21/2013",
-      "time":"3:29 PM",
-      "amount":"$321.33"
-    },
-    {
-      "id":3325,
-      "date":"10/21/2013",
-      "time":"3:20 PM",
-      "amount":"$234.34"
-    },
-    {
-      "id":3324,
-      "date":"10/21/2013",
-      "time":"3:03 PM",
-      "amount":"$724.17"
-    },
-    {
-      "id":3323,
-      "date":"10/21/2013",
-      "time":"3:00 PM",
-      "amount":"$23.71"
-    },
-    {
-      "id":3322,
-      "date":"10/21/2013",
-      "time":"2:49 PM",
-      "amount":"$8345.23"
-    },
-    {
-      "id":3321,
-      "date":"10/21/2013",
-      "time":"2:23 PM",
-      "amount":"$245.12"
-    },
-    {
-      "id":3320,
-      "date":"10/21/2013",
-      "time":"2:15 PM",
-      "amount":"$5663.54"
-    },
-    {
-      "id":3319,
-      "date":"10/21/2013",
-      "time":"2:13 PM",
-      "amount":"$943.45"
-    }
-  ],
-  "messages":[
-    {
-      "align":"left",
-      "img":"http://placehold.it/50/55C1E7/fff",
-      "author":"Jack Sparrow",
-      "time":"12 mins ago",
-      "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales."
-    },
-    {
-      "align":"right",
-      "img":"http://placehold.it/50/FA6F57/fff",
-      "author":"Bhaumik Patel",
-      "time":"13 mins ago",
-      "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales."
-    },
-    {
-      "align":"left",
-      "img":"http://placehold.it/50/55C1E7/fff",
-      "author":"Jack Sparrow",
-      "time":"14 mins ago",
-      "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales."
-    },
-    {
-      "align":"right",
-      "img":"http://placehold.it/50/FA6F57/fff",
-      "author":"Bhaumik Patel",
-      "time":"15 mins ago",
-      "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales."
-    }
-  ],
-  "sidebar":[
-    {
-      "title":"Dashboard",
-      "icon":"fa-dashboard"
-    },
-    {
-      "title":"Charts",
-      "icon":"fa-bar-chart-o",
-      "dropdown":[
-        "Flot Charts",
-        "Morris.js Charts"
-      ]
-    },
-    {
-      "title":"Tables",
-      "icon":"fa-table"
-    },
-    {
-      "title":"Forms",
-      "icon":"fa-edit"
-    },
-    {
-      "title":"UI Elements",
-      "icon":"fa-wrench",
-      "dropdown":[
-        "Panels and Wells",
-        "Buttons",
-        "Notifications",
-        "Typography",
-        "Icons",
-        "Grid"
-      ]
-    }
-  ]
+
 }
