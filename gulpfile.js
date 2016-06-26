@@ -76,30 +76,7 @@ gulp.task("scripts:uglify",["scripts"], () => (
 gulp.task("handlebars", () => {
     const hbs = paths.source.handlebars;
 
-    hbs.options.helpers["ifCond"] = (v1, operator, v2, options) => {
-
-        switch (operator) {
-            case '==':
-                return (v1 == v2) ? options.fn(this) : options.inverse(this);
-            case '===':
-                return (v1 === v2) ? options.fn(this) : options.inverse(this);
-            case '<':
-                return (v1 < v2) ? options.fn(this) : options.inverse(this);
-            case '<=':
-                return (v1 <= v2) ? options.fn(this) : options.inverse(this);
-            case '>':
-                return (v1 > v2) ? options.fn(this) : options.inverse(this);
-            case '>=':
-                return (v1 >= v2) ? options.fn(this) : options.inverse(this);
-            case '&&':
-                return (v1 && v2) ? options.fn(this) : options.inverse(this);
-            case '||':
-                return (v1 || v2) ? options.fn(this) : options.inverse(this);
-            default:
-                return options.inverse(this);
-        }
-
-    };
+    hbs.options.helpers = require('./helpers');
 
     return gulp.src(hbs.src)
                .pipe(handlebars(data, hbs.options))
