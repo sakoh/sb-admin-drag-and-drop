@@ -13,20 +13,19 @@
                 <!-- /input-group -->
             </li>
             {{#each sidebar }}
-            <li>
-                <a href="#"><i class="fa {{icon}} fa-fw"></i> {{title}}
-                {{#if dropdown}}
-                <span class="fa arrow"></span></a>
-                  {{#each dropdown}}
-                  <ul class="nav nav-second-level">
-                      <li><a href="#">{{this}}</a></li>
-                  </ul>
-                  {{/each}}
-                {{else}}
-                </a>
-                {{/if}}
-
-            </li>
+                <li>
+                    <a href="#"><i class="fa {{icon}} fa-fw"></i> {{title}}
+                    {{#if dropdown}}
+                        <span class="fa fa-arrow"></span></a>
+                        {{#each dropdown}}
+                            <ul class="nav nav-second-level">
+                                <li><a href="#">{{this}}</a></li>
+                            </ul>
+                        {{/each}}
+                    {{else}}
+                        </a>
+                    {{/if}}
+                </li>
             {{/each}}
         </ul>
     </div>
