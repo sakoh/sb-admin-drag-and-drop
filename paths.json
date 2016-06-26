@@ -29,9 +29,6 @@
             "ignorePartials": false,
             "batch" : ["./handlebars/partials"]
           },
-          "data": {
-		        "firstName": "Kaanon"
-	        },
           "src": "./handlebars/index.hbs",
           "dest": ".",
           "newName": "index.html"

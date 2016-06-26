@@ -9,7 +9,8 @@ const gulp = require("gulp"),
     browserSync = require("browser-sync").create(),
     handlebars = require("gulp-compile-handlebars"),
     del = require("del"),
-    paths = require("./paths.json");
+    paths = require("./paths.json"),
+    data = require("./data.json");
 
 gulp.task("watch", ["compile"], () => {
     browserSync.init({
@@ -76,7 +77,7 @@ gulp.task("handlebars", () => {
     const hbs = paths.source.handlebars;
 
     return gulp.src(hbs.src)
-               .pipe(handlebars(hbs.data, hbs.options))
+               .pipe(handlebars(data, hbs.options))
                .pipe(rename(hbs.newName))
                .pipe(gulp.dest(hbs.dest));
 });
