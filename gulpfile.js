@@ -13,16 +13,18 @@ const gulp = require("gulp"),
     data = require("./data.json");
 
 gulp.task("watch", ["compile"], () => {
+    const reload = browserSync.reload;
+
     browserSync.init({
         server: {
             baseDir: "./"
         }
     });
 
-
     gulp.watch(paths.source.sass, ["sass"]);
+    gulp.watch("./handlebars/**/*.hbs",["handlebars", reload]);
     gulp.watch("js/*.js",["scripts:watch"]);
-    gulp.watch("pages/*.html").on("change", browserSync.reload);
+    gulp.watch("pages/*.html").on("change", reload);
 });
 
 gulp.task("sass", () => (
@@ -87,5 +89,3 @@ gulp.task("handlebars", () => {
 gulp.task("compile",["sass", "handlebars", "fonts","images","scripts"]);
 
 gulp.task("compile:dist",["sass:minify", "handlebars", "fonts","images","scripts:uglify"]);
-
-gulp.watch(["./handlebars/**/*.hbs", "./sass/**/*.scss"],["compile"])
