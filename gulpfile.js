@@ -76,7 +76,7 @@ gulp.task("scripts:uglify",["scripts"], () => (
 gulp.task("handlebars", () => {
     const hbs = paths.source.handlebars;
 
-    hbs.options.helpers = require('./helpers');
+    hbs.options.helpers = require("./helpers");
 
     return gulp.src(hbs.src)
                .pipe(handlebars(data, hbs.options))
@@ -84,6 +84,8 @@ gulp.task("handlebars", () => {
                .pipe(gulp.dest(hbs.dest));
 });
 
-gulp.task("compile",["sass", 'handlebars', "fonts","images","scripts"]);
+gulp.task("compile",["sass", "handlebars", "fonts","images","scripts"]);
 
 gulp.task("compile:dist",["sass:minify", "handlebars", "fonts","images","scripts:uglify"]);
+
+gulp.watch(["./handlebars/**/*.hbs", "./sass/**/*.scss"],["compile"])
