@@ -1,0 +1,76 @@
+
+.btn-outline {
+  color: inherit;
+  background-color: transparent;
+  transition: all .5s;
+
+  &.btn-primary {
+    color: $brand-primary;
+
+    &:hover {
+      color: $btn-outline-hover;
+    }
+  }
+
+  &.btn-success {
+    color: $brand-success;
+
+    &:hover {
+      color: $btn-outline-hover;
+    }
+  }
+
+  &.btn-info {
+    color: $brand-info;
+
+    &:hover {
+      color: $btn-outline-hover;
+    }
+  }
+
+  &.btn-warning {
+    color: $brand-warning;
+
+    &:hover {
+      color: $btn-outline-hover;
+    }
+  }
+
+  &.btn-danger {
+    color: $brand-danger;
+
+    &:hover {
+      color: $btn-outline-hover;
+    }
+  }
+}
+
+// Circle Buttons
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.428571429;
+
+  &.btn-lg {
+    width: 50px;
+    height: 50px;
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
+  &.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;
+  }
+}

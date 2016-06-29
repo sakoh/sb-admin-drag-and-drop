@@ -1,0 +1,21 @@
+// --Topbar
+@import "../modules/topbar";
+
+// --Sidebar
+@import "../modules/sidebar";
+
+
+@media(min-width:768px) {
+  .sidebar {
+    z-index: 1;
+    position: absolute;
+    width: 250px;
+    margin-top: 51px;
+  }
+
+  .navbar-top-links{
+    .dropdown-messages, .dropdown-tasks, .dropdown-alerts {
+      margin-left: auto;
+    }
+  }
+}
