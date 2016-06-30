@@ -1,0 +1,14 @@
+body {
+  a{
+      color: $link-color;
+  }
+}
+
+body, .navbar, #side-menu, .nav.navbar-top-links.navbar-right {
+	background-color: lighten($background-color, 10%);
+	a{
+		&:hover{
+			background-color: lighten($background-color, 5%);
+		}
+	}
+}

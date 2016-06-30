@@ -8203,3 +8203,11 @@ table.dataTable thead .sorting:after {
 
 .active > a > .fa.plus-minus:before {
   content: "\f068"; }
+
+body a {
+  color: #3d576d; }
+
+body, .navbar, #side-menu, .nav.navbar-top-links.navbar-right {
+  background-color: #f4c37d; }
+  body a:hover, .navbar a:hover, #side-menu a:hover, .nav.navbar-top-links.navbar-right a:hover {
+    background-color: #f2b866; }
