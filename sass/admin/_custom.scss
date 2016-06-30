@@ -4,11 +4,27 @@ body {
   }
 }
 
-body, .navbar, #side-menu, .nav.navbar-top-links.navbar-right {
+body,
+.navbar,
+#side-menu,
+.nav.navbar-top-links.navbar-right,
+.nav.navbar-top-links.navbar-right>li,
+a.navbar-brand {
 	background-color: lighten($background-color, 10%);
-	a{
+	a, span.input-group-btn > button{
 		&:hover{
 			background-color: lighten($background-color, 5%);
 		}
 	}
+
+	// border-color: lighten($link-color, 5%);
+
+}
+
+.input-group.custom-search-form input, span.input-group-btn > button,  {
+	background-color: lighten($background-color, 15%);
+}
+
+#side-menu>li, .navbar, .input-group.custom-search-form input, span.input-group-btn > button {
+	border-color: lighten($link-color, 5%);
 }
