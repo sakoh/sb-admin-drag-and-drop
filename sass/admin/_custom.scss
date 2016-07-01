@@ -17,14 +17,13 @@ a.navbar-brand {
 		}
 	}
 
-	// border-color: lighten($link-color, 5%);
-
 }
 
-.input-group.custom-search-form input, span.input-group-btn > button,  {
+.input-group.custom-search-form input, span.input-group-btn > button, #page-wrapper  {
 	background-color: lighten($background-color, 15%);
 }
 
-#side-menu>li, .navbar, .input-group.custom-search-form input, span.input-group-btn > button {
-	border-color: lighten($link-color, 5%);
+#page-wrapper{
+	background-color: $wrapper-color;
+	border-left: 1px soild $link-color;
 }

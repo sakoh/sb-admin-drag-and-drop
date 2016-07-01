@@ -8213,7 +8213,7 @@ body,
 .nav.navbar-top-links.navbar-right,
 .nav.navbar-top-links.navbar-right > li,
 a.navbar-brand {
-  background-color: #f4c37d; }
+  background-color: #efeffc; }
   body a:hover, body span.input-group-btn > button:hover,
   .navbar a:hover,
   .navbar span.input-group-btn > button:hover,
@@ -8225,10 +8225,11 @@ a.navbar-brand {
   .nav.navbar-top-links.navbar-right > li span.input-group-btn > button:hover,
   a.navbar-brand a:hover,
   a.navbar-brand span.input-group-btn > button:hover {
-    background-color: #f2b866; }
+    background-color: #d9d9f7; }
 
-.input-group.custom-search-form input, span.input-group-btn > button {
-  background-color: #f6ce95; }
+.input-group.custom-search-form input, span.input-group-btn > button, #page-wrapper {
+  background-color: white; }
 
-#side-menu > li, .navbar, .input-group.custom-search-form input, span.input-group-btn > button {
-  border-color: #46647d; }
+#page-wrapper {
+  background-color: #f7f7f7;
+  border-left: 1px soild #3d576d; }
