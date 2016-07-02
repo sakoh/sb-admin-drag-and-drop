@@ -167,6 +167,18 @@
         {
             "title": "Charts",
             "icon": "fa-bar-chart"
+        },
+        {
+            "title": "Settings",
+            "icon": "fa-cog"
+        },
+        {
+            "title": "Help",
+            "icon": "fa-question-circle"
+        },
+        {
+            "title": "Sign Out",
+            "icon": "fa-sign-out"
         }
     ],
     "notifications":[
