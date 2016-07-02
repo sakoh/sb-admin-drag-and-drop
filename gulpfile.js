@@ -10,7 +10,7 @@ const gulp = require("gulp"),
     handlebars = require("gulp-compile-handlebars"),
     del = require("del"),
     paths = require("./paths.json"),
-    data = require("./data.json");
+    data = require("./handlebars/data/index.data");
 
 gulp.task("watch", ["compile"], () => {
     const reload = browserSync.reload;
