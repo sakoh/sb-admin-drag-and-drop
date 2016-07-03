@@ -1,9 +1,9 @@
 <ul class="nav navbar-top-links navbar-right">
-    {{#each navigation}}
+    {% for link in navigation %}
         <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                <i class="fa {{icon}} fa-fw"></i> {{title}}
+                <i class="fa {{ link.icon }} fa-fw"></i> {{ link.title }}
             </a>
         </li>
-    {{/each}}
+    {% endfor %}
 </ul>

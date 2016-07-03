@@ -12,21 +12,21 @@
                 </div>
                 <!-- /input-group -->
             </li>
-            {{#each sidebar }}
+            {% for item in sidebar %}
                 <li>
-                    <a href="#"><i class="fa {{icon}} fa-fw"></i> {{title}}
-                    {{#if dropdown }}
+                    <a href="#"><i class="fa {{ item.icon }} fa-fw"></i> {{ item.title }}
+                    {% if item.dropdown %}
                         <span class="fa arrow"></span></a>
-                        {{#each dropdown}}
+                        {% for dropdown_item in item.dropdown %}
                             <ul class="nav nav-second-level">
-                                <li><a href="#">{{this}}</a></li>
+                                <li><a href="#">{{ dropdown_item }}</a></li>
                             </ul>
-                        {{/each}}
-                    {{else}}
+                        {% endfor %}
+                    {% else %}
                         </a>
-                    {{/if}}
+                    {% endif %}
                 </li>
-            {{/each}}
+            {% endfor %}
         </ul>
     </div>
     <!-- /.sidebar-collapse -->

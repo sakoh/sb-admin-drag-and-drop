@@ -39,22 +39,22 @@
     <!-- /.panel-heading -->
     <div class="panel-body">
         <ul class="chat">
-            {{#each messages}}
-                <li class="{{align}} clearfix">
-                    <span class="chat-img pull-{{align}}">
-                        <img src="{{img}}" alt="User Avatar" class="img-circle" />
+            {% for message in messages %}
+                <li class="{{ message.align }} clearfix">
+                    <span class="chat-img pull-{{ message.align }}">
+                        <img src="{{ message.img }}" alt="User Avatar" class="img-circle" />
                     </span>
                     <div class="chat-body clearfix">
                         <div class="header">
-                            <strong class="primary-font">{{author}}</strong>
+                            <strong class="primary-font">{{ message.author }}</strong>
                             <small class="pull-right text-muted">
-                                <i class="fa fa-clock-o fa-fw"></i> {{time}}
+                                <i class="fa fa-clock-o fa-fw"></i> {{ message.time }}
                             </small>
                         </div>
-                        <p>{{body}}</p>
+                        <p>{{ message.body }}</p>
                     </div>
                 </li>
-            {{/each}}
+            {% endfor %}
         </ul>
     </div>
     <!-- /.panel-body -->

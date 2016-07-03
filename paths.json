@@ -24,15 +24,9 @@
             "bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js",
             "js/admin.js"
         ],
-        "handlebars": {
-          "options": {
-            "ignorePartials": false,
-            "batch" : ["./handlebars/partials"],
-            "helpers":{}
-          },
-          "src": "./handlebars/index.hbs",
-          "dest": ".",
-          "newName": "index.html"
+        "templates": {
+          "src": "./templates/index.html",
+          "dest": "."
         }
     },
     "dest": {

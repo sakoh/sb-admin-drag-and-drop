@@ -7,10 +7,10 @@ const gulp = require("gulp"),
     imagemin = require("gulp-imagemin"),
     pngquant = require("imagemin-pngquant"),
     browserSync = require("browser-sync").create(),
-    handlebars = require("gulp-compile-handlebars"),
     del = require("del"),
     paths = require("./paths.json"),
-    data = require("./handlebars/data/index.data");
+    data = require("./templates/data/index.data"),
+    nunjucks = require("gulp-nunjucks");
 
 gulp.task("watch", ["compile"], () => {
     const reload = browserSync.reload;
@@ -22,7 +22,7 @@ gulp.task("watch", ["compile"], () => {
     });
 
     gulp.watch(paths.source.sass, ["sass"]);
-    gulp.watch("./handlebars/**/*.hbs",["handlebars", reload]);
+    gulp.watch("./templates/**/*.html",["templates", reload]);
     gulp.watch("js/*.js",["scripts:watch"]);
     gulp.watch("pages/*.html").on("change", reload);
 });
@@ -75,17 +75,15 @@ gulp.task("scripts:uglify",["scripts"], () => (
         .pipe(gulp.dest(paths.dest.scripts))
 ));
 
-gulp.task("handlebars", () => {
-    const hbs = paths.source.handlebars;
+gulp.task("templates", () => {
 
-    hbs.options.helpers = require("./helpers");
+    const templates = paths.source.templates;
 
-    return gulp.src(hbs.src)
-               .pipe(handlebars(data, hbs.options))
-               .pipe(rename(hbs.newName))
-               .pipe(gulp.dest(hbs.dest));
+    return gulp.src(templates.src)
+		       .pipe(nunjucks.compile(data))
+		       .pipe(gulp.dest(templates.dest));
 });
 
-gulp.task("compile",["sass", "handlebars", "fonts","images","scripts"]);
+gulp.task("compile",["sass", "templates", "fonts","images","scripts"]);
 
-gulp.task("compile:dist",["sass:minify", "handlebars", "fonts","images","scripts:uglify"]);
+gulp.task("compile:dist",["sass:minify", "templates", "fonts","images","scripts:uglify"]);

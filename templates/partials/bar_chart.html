@@ -36,14 +36,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {{#each timesheet}}
+                            {% for timesheet in timesheets %}
                                 <tr>
-                                    <td>{{id}}</td>
-                                    <td>{{date}}</td>
-                                    <td>{{time}}</td>
-                                    <td>{{amount}}</td>
+                                    <td>{{ timesheet.id }}</td>
+                                    <td>{{ timesheet.date }}</td>
+                                    <td>{{ timesheet.time }}</td>
+                                    <td>{{ timesheet.amount }}</td>
                                 </tr>
-                            {{/each}}
+                            {% endfor %}
                         </tbody>
                     </table>
                 </div>

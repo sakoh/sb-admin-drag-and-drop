@@ -1,0 +1,50 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <i class="fa fa-clock-o fa-fw"></i> Responsive Timeline
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <ul class="timeline">
+            {% for item in timeline %}
+                <li class="{{ "timeline-inverted" if item.inverted }}">
+                    {% if item.icon %}
+                        <div class="timeline-badge {{ item.status if item.status }}">
+                            <i class="fa {{ item.icon }}"></i>
+                        </div>
+                    {% endif %}
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">{{ item.title }}</h4>
+                            {% if item.time %}
+                                <p>
+                                    <small class="text-muted"><i class="fa fa-clock-o"></i>{{ item.time }}</small>
+                                </p>
+                            {% endif %}
+                        </div>
+                        <div class="timeline-body">
+                            <p>{{ item.body }}</p>
+                            {% if item.actions %}
+                                <hr>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                                        <i class="fa fa-gear"></i>  <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        {% for action in item.actions %}
+                                            <li>
+                                                <a href="#">{{ action }}</a>
+                                            </li>
+                                        {% endfor %}
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <!-- /.panel-body -->
+</div>

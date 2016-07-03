@@ -1,15 +1,15 @@
 <div class="row">
-    {{#each panel_boxes}}
+    {% for panel_box in panel_boxes %}
         <div class="col-lg-3 col-md-6">
-            <div class="panel {{bg_class}}">
+            <div class="panel {{ panel_box.bg_class }}">
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-xs-3">
-                            <i class="fa {{icon}} fa-5x"></i>
+                            <i class="fa {{ panel_box.icon }} fa-5x"></i>
                         </div>
                         <div class="col-xs-9 text-right">
-                            <div class="huge">{{count}}</div>
-                            <div>{{title}}</div>
+                            <div class="huge">{{ panel_box.count }}</div>
+                            <div>{{ panel_box.title }}</div>
                         </div>
                     </div>
                 </div>
@@ -22,5 +22,5 @@
                 </a>
             </div>
         </div>
-    {{/each}}
+    {% endfor %}
 </div>

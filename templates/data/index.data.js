@@ -1,6 +1,6 @@
 module.exports = {
     "panel_boxes": require('./panel_boxes.data'),
-    "timesheet": require('./timesheet.data'),
+    "timesheets": require('./timesheets.data'),
     "messages": require('./messages.data'),
     "sidebar": require('./sidebar.data'),
     "navigation": require('./navigation.data'),

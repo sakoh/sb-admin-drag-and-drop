@@ -5,13 +5,13 @@
     <!-- /.panel-heading -->
     <div class="panel-body">
         <div class="list-group">
-            {{#each notifications }}
+            {% for notification in notifications %}
                 <a href="#" class="list-group-item">
-                    <i class="fa {{icon}} fa-fw"></i> {{title}}
-                    <span class="pull-right text-muted small"><em>{{time}}</em>
+                    <i class="fa {{ notification.icon }} fa-fw"></i> {{ notification.title }}
+                    <span class="pull-right text-muted small"><em>{{ notification.time }}</em>
                     </span>
                 </a>
-            {{/each}}
+            {% endfor %}
         </div>
         <!-- /.list-group -->
         <a href="#" class="btn btn-default btn-block">View All Alerts</a>
