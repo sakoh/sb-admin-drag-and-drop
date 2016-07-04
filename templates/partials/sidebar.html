@@ -13,19 +13,24 @@
                 <!-- /input-group -->
             </li>
             {% for item in sidebar %}
-                <li>
-                    <a href="#"><i class="fa {{ item.icon }} fa-fw"></i> {{ item.title }}
-                    {% if item.dropdown %}
-                        <span class="fa arrow"></span></a>
-                        {% for dropdown_item in item.dropdown %}
-                            <ul class="nav nav-second-level">
-                                <li><a href="#">{{ dropdown_item }}</a></li>
-                            </ul>
-                        {% endfor %}
-                    {% else %}
-                        </a>
-                    {% endif %}
-                </li>
+            <li>
+                <a href="#"><i class="fa fa-sitemap fa-fw"></i> {{ item.title }} <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    {% for link in item.second_level %}
+                            <li>
+                                <a href="#">{{ link.title }} <span class="fa arrow"></span></a>
+                                {% if link.third_level %}
+                                    <ul class="nav nav-third-level">
+                                        {% for third_level_link in link.third_level %}
+                                            <li>
+                                                <a href="#">{{ third_level_link }}</a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            </li>
+                    {% endfor %}
+                    </li>
             {% endfor %}
         </ul>
     </div>
