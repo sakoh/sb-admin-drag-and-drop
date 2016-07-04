@@ -9,7 +9,7 @@ const gulp = require("gulp"),
     browserSync = require("browser-sync").create(),
     del = require("del"),
     paths = require("./paths.json"),
-    data = require("./templates/data/index.data"),
+    data = require("./data"),
     nunjucks = require("gulp-nunjucks");
 
 gulp.task("watch", ["compile"], () => {

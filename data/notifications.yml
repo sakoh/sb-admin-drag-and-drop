@@ -1,0 +1,37 @@
+---
+  -
+    title: "New Comment"
+    icon: "fa-comment"
+    time: "4 minutes ago"
+  -
+    title: "3 New Followers"
+    icon: "fa-twitter"
+    time: "12 minutes ago"
+  -
+    title: "Message Sent"
+    icon: "fa-envelope"
+    time: "27 minutes ago"
+  -
+    title: "New Task"
+    icon: "fa-tasks"
+    time: "43 minutes ago"
+  -
+    title: "Server Rebooted"
+    icon: "fa-upload"
+    time: "11:32 AM"
+  -
+    title: "Server Crashed"
+    icon: "fa-bolt"
+    time: "11:13 AM"
+  -
+    title: "Server Not Responding"
+    icon: "fa-warning"
+    time: "10:57 AM"
+  -
+    title: "New Order Placed"
+    icon: "fa-shopping-cart"
+    time: "9:49 AM"
+  -
+    title: "Payment Received"
+    icon: "fa-money"
+    time: "Yesterday"
