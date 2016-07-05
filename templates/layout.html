@@ -33,10 +33,9 @@
 
     </div>
     <!-- /#wrapper -->
-
-    <script src="dist/js/admin.js"></script>
-
-    <script src="js/morris-data.js"></script>
+    {% for script in scripts %}
+        <script src="{{ script }}"></script>
+    {% endfor %}
 
 </body>
 

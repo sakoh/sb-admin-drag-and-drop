@@ -13,5 +13,9 @@ module.exports = {
     "navigation": jsonify("navigation.yml"),
     "notifications": jsonify("notifications.yml"),
     "timeline": jsonify("timeline.yml"),
-    "todos": jsonify("todos.yml")
+    "todos": jsonify("todos.yml"),
+    "scripts":[
+        "dist/js/admin.js",
+        "js/morris-data.js"
+    ]
 };
