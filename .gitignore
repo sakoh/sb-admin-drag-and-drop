@@ -52,3 +52,5 @@ bower_components
 
 #Node dependencies
 node_modules
+
+dist
