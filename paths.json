@@ -22,7 +22,10 @@
             "bower_components/flot.tooltip/js/jquery.flot.tooltip.js",
             "bower_components/datatables/media/js/jquery.dataTables.js",
             "bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js",
-            "js/admin.js"
+            "js/admin.js",
+            "js/morris-data.js",
+            "js/flot-data.js"
+
         ],
         "templates": {
           "src": "./templates/index.html",
