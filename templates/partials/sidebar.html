@@ -18,7 +18,7 @@
                 <ul class="nav nav-second-level">
                 {% for link in item.second_level %}
                     <li>
-                        <a href="#">{{ link.title }} <span class="fa arrow"></span></a>
+                        <a href="#"> {{ link.count }} {{ link.title }} <span class="fa arrow"></span></a>
                         {% if link.third_level %}
                             <ul class="nav nav-third-level">
                                 {% for third_level_link in link.third_level %}
