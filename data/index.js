@@ -6,12 +6,7 @@ function jsonify(file) {
 }
 
 module.exports = {
-    "panel_boxes": jsonify("panel_boxes.yml"),
-    "timesheets": jsonify("timesheets.yml"),
-    "messages": jsonify("messages.yml"),
     "sidebar": jsonify("sidebar.yml"),
     "navigation": jsonify("navigation.yml"),
-    "notifications": jsonify("notifications.yml"),
-    "timeline": jsonify("timeline.yml"),
     "todos": jsonify("todos.yml")
 };

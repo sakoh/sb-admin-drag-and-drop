@@ -24,7 +24,8 @@
             "bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js",
             "bower_components/Chart.js/dist/Chart.min.js",
             "js/admin.js",
-			"js/pipeline.js"
+			"js/pipeline.js",
+			"js/financials.js"
         ],
         "templates": {
           "src": "./templates/index.html",
