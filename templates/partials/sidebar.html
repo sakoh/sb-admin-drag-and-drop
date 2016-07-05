@@ -16,23 +16,23 @@
             <li>
                 <a href="#"><i class="fa fa-sitemap fa-fw"></i> {{ item.title }} <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
-                    {% for link in item.second_level %}
-                            <li>
-                                <a href="#">{{ link.title }} <span class="fa arrow"></span></a>
-                                {% if link.third_level %}
-                                    <ul class="nav nav-third-level">
-                                        {% for third_level_link in link.third_level %}
-                                            <li>
-                                                <a href="#">{{ third_level_link }}</a>
-                                            </li>
-                                        {% endfor %}
-                                    </ul>
-                                {% endif %}
-                            </li>
-                    {% endfor %}
+                {% for link in item.second_level %}
+                    <li>
+                        <a href="#">{{ link.title }} <span class="fa arrow"></span></a>
+                        {% if link.third_level %}
+                            <ul class="nav nav-third-level">
+                                {% for third_level_link in link.third_level %}
+                                    <li>
+                                        <a href="#">{{ third_level_link }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
                     </li>
+                {% endfor %}
+                </ul>
+            </li>
             {% endfor %}
-        </ul>
     </div>
     <!-- /.sidebar-collapse -->
 </div>
