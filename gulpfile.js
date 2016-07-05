@@ -7,7 +7,6 @@ const gulp = require("gulp"),
     imagemin = require("gulp-imagemin"),
     pngquant = require("imagemin-pngquant"),
     browserSync = require("browser-sync").create(),
-    del = require("del"),
     paths = require("./paths.json"),
     data = require("./data"),
     nunjucks = require("gulp-nunjucks");
