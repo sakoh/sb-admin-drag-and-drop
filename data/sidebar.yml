@@ -1,9 +1,9 @@
 ---
   -
-    title: "To Do List"
+    title: To Do List
     second_level:
         -
-          title: "Pending Job Approval by Others"
+          title: Pending Job Approval by Others
           count: 4
           third_level:
               - Job 1
@@ -11,7 +11,7 @@
               - Job 3
               - Job 4
         -
-          title: "Pending My Job Approval by Others"
+          title: Pending My Job Approval by Others
           count: 4
           third_level:
               - Job 1
@@ -19,7 +19,7 @@
               - Job 3
               - Job 4
         -
-          title: "New Contingent Workers"
+          title: New Contingent Workers
           count: 4
           third_level:
               - Worker 1
@@ -27,10 +27,10 @@
               - Worker 3
               - Worker 4
   -
-    title: "Notifications"
+    title: Notifications
     second_level:
         -
-          title: "Pending Task Approval by Others"
+          title: Pending Task Approval by Others
           count: 4
           third_level:
               - Task 1
@@ -38,7 +38,7 @@
               - Task 3
               - Task 4
         -
-          title: "Pending My Task Approval by Others"
+          title: Pending My Task Approval by Others
           count: 4
           third_level:
               - Task 1
@@ -46,7 +46,7 @@
               - Task 3
               - Task 4
         -
-          title: "New Contingent Workers"
+          title: New Contingent Workers
           count: 4
           third_level:
               - Worker 1
