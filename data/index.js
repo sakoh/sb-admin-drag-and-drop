@@ -12,5 +12,6 @@ module.exports = {
     "sidebar": jsonify("sidebar.yml"),
     "navigation": jsonify("navigation.yml"),
     "notifications": jsonify("notifications.yml"),
-    "timeline": jsonify("timeline.yml")
+    "timeline": jsonify("timeline.yml"),
+    "todos": jsonify("todos.yml")
 };

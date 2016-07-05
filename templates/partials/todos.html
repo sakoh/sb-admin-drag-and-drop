@@ -1,0 +1,33 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        To Do List
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>Job</th>
+                        <th>Description</th>
+                        <th>Contingent Worker</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for todo in todos %}
+                        <tr>
+                            <td><a href="#">{{ todo.job }}</a></td>
+                            <td>{{ todo.description }}</td>
+                            <td><a href="#">{{ todo.contingent_worker }}</a></td>
+                            <td><a href="#">{{ todo.action }}</a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <!-- /.table-responsive -->
+    </div>
+        <!-- /.row -->
+</div>
+    <!-- /.panel-body -->
