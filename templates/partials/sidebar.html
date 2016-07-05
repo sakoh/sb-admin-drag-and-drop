@@ -14,7 +14,7 @@
             </li>
             {% for item in sidebar %}
             <li>
-                <a href="#"><i class="fa fa-sitemap fa-fw"></i> {{ item.title }} <span class="fa arrow"></span></a>
+                <a class="sidebar-top-level" href="#"><i class="fa fa-folder fa-fw"></i> {{ item.title }} </span></a>
                 <ul class="nav nav-second-level">
                 {% for link in item.second_level %}
                     <li>

@@ -29,4 +29,19 @@ $(function() {
     if (element.is('li')) {
         element.addClass('active');
     }
+
+    //added by Sako Hartounian for sidebar
+    $('.sidebar-top-level').click(function(){
+        var icon = $(this).find('.fa');
+
+        if(icon.hasClass('fa-folder')) {
+
+            icon.removeClass('fa-folder')
+                .addClass('fa-folder-open');
+        } else {
+
+            icon.removeClass('fa-folder-open')
+                .addClass('fa-folder');
+        }
+    });
 });
