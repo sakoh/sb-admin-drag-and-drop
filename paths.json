@@ -23,9 +23,11 @@
             "bower_components/datatables/media/js/jquery.dataTables.js",
             "bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js",
             "bower_components/Chart.js/dist/Chart.min.js",
+			"bower_components/zabuto_calendar/zabuto_calendar.min.js",
             "js/admin.js",
 			"js/pipeline.js",
-			"js/financials.js"
+			"js/financials.js",
+			"js/calendar.js"
         ],
         "templates": {
           "src": "./templates/index.html",

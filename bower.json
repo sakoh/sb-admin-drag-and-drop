@@ -40,6 +40,7 @@
     "flot.tooltip": "~0.8.4",
     "bootstrap-sass-official": "~3.3.4",
     "dragula": "~3.7.1",
-    "Chart.js": "~2.1.6"
+    "Chart.js": "~2.1.6",
+    "zabuto_calendar": "~1.2.2"
   }
 }

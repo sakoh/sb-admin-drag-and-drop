@@ -12,6 +12,7 @@
     <title>SB Admin 2 - Bootstrap Admin Theme</title>
 
     <link rel="stylesheet" href="dist/css/sb-admin-2.css">
+    <link rel="stylesheet" href="bower_components/zabuto_calendar/zabuto_calendar.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -401,6 +402,36 @@
         <!-- /.row -->
 </div>
     <!-- /.panel-body -->
+
+            <div class="panel panel-default">
+    <div class="panel-heading">
+        <i class="fa fa-calendar fa-fw"></i> Calendar
+        <div class="pull-right">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                    Actions
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu pull-right" role="menu">
+                    <li><a href="#">Action</a>
+                    </li>
+                    <li><a href="#">Another action</a>
+                    </li>
+                    <li><a href="#">Something else here</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <div id="my-calendar"></div>
+    </div>
+    <!-- /.panel-body -->
+</div>
 
         </div>
         <div class="col-lg-6">
