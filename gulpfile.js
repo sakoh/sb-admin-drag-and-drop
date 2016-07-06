@@ -20,7 +20,7 @@ gulp.task("watch", ["compile"], () => {
         }
     });
 
-    gulp.watch(paths.source.sass, ["sass"]);
+    gulp.watch("sass/**/*.scss", ["stylesheets"]);
     gulp.watch("./templates/**/*.html",["templates", reload]);
     gulp.watch("js/*.js",["scripts:watch"]);
     gulp.watch("pages/*.html").on("change", reload);
@@ -31,15 +31,6 @@ gulp.task("sass", () => (
         .pipe(sass())
         .pipe(gulp.dest(paths.dest.styles))
         .pipe(browserSync.stream())
-));
-
-gulp.task("sass:minify", ["sass"], () => (
-    gulp.src(paths.dest + "/sb-admin-2.css")
-        .pipe(rename({
-            extname: ".min.css"
-        }))
-        .pipe(minifyCss())
-        .pipe(gulp.dest(paths.dest.styles))
 ));
 
 gulp.task("fonts", () => (
@@ -63,6 +54,23 @@ gulp.task("scripts", () => (
         .pipe(gulp.dest(paths.dest.scripts))
 ));
 
+gulp.task("stylesheets",["sass"], () => (
+    gulp.src(paths.source.stylesheets)
+        .pipe(concat("style.css"))
+        .pipe(gulp.dest(paths.dest.styles))
+));
+
+gulp.task("stylesheets:uglify",["stylesheets"], () => (
+    gulp.src(paths.dest.styles + "/style.css")
+        .pipe(rename({
+            extname: ".min.css"
+        }))
+        .pipe(uglify())
+        .pipe(gulp.dest(paths.dest.styles))
+));
+
+gulp.task("styles:watch",["styles"],browserSync.reload);
+
 gulp.task("scripts:watch",["scripts"],browserSync.reload);
 
 gulp.task("scripts:uglify",["scripts"], () => (
@@ -83,6 +91,6 @@ gulp.task("templates", () => {
 		       .pipe(gulp.dest(templates.dest));
 });
 
-gulp.task("compile",["sass", "templates", "fonts","images","scripts"]);
+gulp.task("compile",["templates", "fonts","images","scripts", "stylesheets"]);
 
-gulp.task("compile:dist",["sass:minify", "templates", "fonts","images","scripts:uglify"]);
+gulp.task("compile:dist",["templates", "fonts","images","scripts:uglify", "stylesheets:uglify"]);

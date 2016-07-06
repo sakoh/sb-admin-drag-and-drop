@@ -31,6 +31,11 @@
 			"js/calendar.js",
 			"js/dragula.js"
         ],
+        "stylesheets":[
+            "dist/css/sb-admin-2.css",
+            "bower_components/zabuto_calendar/zabuto_calendar.min.css",
+            "bower_components/dragula/dist/dragula.min.css"
+        ],
         "templates": {
           "src": "./templates/index.html",
           "dest": "."
