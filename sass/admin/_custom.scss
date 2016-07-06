@@ -27,3 +27,7 @@ a.navbar-brand {
 	background-color: $wrapper-color;
 	border-left: 1px soild $link-color;
 }
+
+.panel.panel-default {
+    cursor: move;
+}

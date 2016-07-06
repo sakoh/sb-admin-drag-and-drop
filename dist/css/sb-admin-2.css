@@ -8233,3 +8233,6 @@ a.navbar-brand {
 #page-wrapper {
   background-color: #f7f7f7;
   border-left: 1px soild #3d576d; }
+
+.panel.panel-default {
+  cursor: move; }
