@@ -1,0 +1,19 @@
+---
+    -
+        title: Billing Schedule
+        icon: fa-calendar
+    -
+        title: Classification Recommendation
+        icon: fa-dropbox
+    -
+        title: ESRS Search
+        icon: fa-search
+    -
+        title: Group Data Update
+        icon: fa-users
+    -
+        title: Job Cost Calculator
+        icon: fa-calculator
+    -
+        title: Special Bill Lookup
+        icon: fa-search

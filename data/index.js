@@ -8,5 +8,6 @@ function jsonify(file) {
 module.exports = {
     "sidebar": jsonify("sidebar.yml"),
     "navigation": jsonify("navigation.yml"),
-    "todos": jsonify("todos.yml")
+    "todos": jsonify("todos.yml"),
+    "utilities": jsonify("utilities.yml")
 };
