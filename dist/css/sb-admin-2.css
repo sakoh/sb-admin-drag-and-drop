@@ -8204,35 +8204,12 @@ table.dataTable thead .sorting:after {
 .active > a > .fa.plus-minus:before {
   content: "\f068"; }
 
-body a {
-  color: #3d576d; }
-
-body,
-.navbar,
-#side-menu,
-.nav.navbar-top-links.navbar-right,
-.nav.navbar-top-links.navbar-right > li,
-a.navbar-brand {
-  background-color: #efeffc; }
-  body a:hover, body span.input-group-btn > button:hover,
-  .navbar a:hover,
-  .navbar span.input-group-btn > button:hover,
-  #side-menu a:hover,
-  #side-menu span.input-group-btn > button:hover,
-  .nav.navbar-top-links.navbar-right a:hover,
-  .nav.navbar-top-links.navbar-right span.input-group-btn > button:hover,
-  .nav.navbar-top-links.navbar-right > li a:hover,
-  .nav.navbar-top-links.navbar-right > li span.input-group-btn > button:hover,
-  a.navbar-brand a:hover,
-  a.navbar-brand span.input-group-btn > button:hover {
-    background-color: #d9d9f7; }
-
-.input-group.custom-search-form input, span.input-group-btn > button, #page-wrapper {
-  background-color: white; }
-
-#page-wrapper {
-  background-color: #f7f7f7;
-  border-left: 1px soild #3d576d; }
-
 .panel.panel-default {
   cursor: move; }
+
+.navbar, #side-menu, #wrapper {
+  background-color: #666666; }
+  .navbar a.sidebar-top-level, .navbar a.dropdown-toggle, .navbar ul.nav-second-level a, .navbar a.navbar-brand, #side-menu a.sidebar-top-level, #side-menu a.dropdown-toggle, #side-menu ul.nav-second-level a, #side-menu a.navbar-brand, #wrapper a.sidebar-top-level, #wrapper a.dropdown-toggle, #wrapper ul.nav-second-level a, #wrapper a.navbar-brand {
+    color: white; }
+    .navbar a.sidebar-top-level:hover, .navbar a.sidebar-top-level:visited, .navbar a.dropdown-toggle:hover, .navbar a.dropdown-toggle:visited, .navbar ul.nav-second-level a:hover, .navbar ul.nav-second-level a:visited, .navbar a.navbar-brand:hover, .navbar a.navbar-brand:visited, #side-menu a.sidebar-top-level:hover, #side-menu a.sidebar-top-level:visited, #side-menu a.dropdown-toggle:hover, #side-menu a.dropdown-toggle:visited, #side-menu ul.nav-second-level a:hover, #side-menu ul.nav-second-level a:visited, #side-menu a.navbar-brand:hover, #side-menu a.navbar-brand:visited, #wrapper a.sidebar-top-level:hover, #wrapper a.sidebar-top-level:visited, #wrapper a.dropdown-toggle:hover, #wrapper a.dropdown-toggle:visited, #wrapper ul.nav-second-level a:hover, #wrapper ul.nav-second-level a:visited, #wrapper a.navbar-brand:hover, #wrapper a.navbar-brand:visited {
+      background-color: #4d4d4d; }

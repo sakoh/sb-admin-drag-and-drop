@@ -1,33 +1,13 @@
-body {
-  a{
-      color: $link-color;
-  }
-}
-
-body,
-.navbar,
-#side-menu,
-.nav.navbar-top-links.navbar-right,
-.nav.navbar-top-links.navbar-right>li,
-a.navbar-brand {
-	background-color: lighten($background-color, 10%);
-	a, span.input-group-btn > button{
-		&:hover{
-			background-color: lighten($background-color, 5%);
-		}
-	}
-
-}
-
-.input-group.custom-search-form input, span.input-group-btn > button, #page-wrapper  {
-	background-color: lighten($background-color, 15%);
-}
-
-#page-wrapper{
-	background-color: $wrapper-color;
-	border-left: 1px soild $link-color;
-}
-
 .panel.panel-default {
     cursor: move;
+}
+
+.navbar, #side-menu, #wrapper {
+    background-color: $background-color;
+    a.sidebar-top-level, a.dropdown-toggle, ul.nav-second-level a, a.navbar-brand {
+        color: white;
+        &:hover, &:visited{
+            background-color: darken($background-color, 10%);
+        }
+    }
 }
