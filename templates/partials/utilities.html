@@ -1,37 +1,15 @@
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <i class="fa fa-wrench fa-fw"></i> Utilities
-        <div class="pull-right">
-            <div class="btn-group">
-                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                    Actions
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu pull-right" role="menu">
-                    <li><a href="#">Action</a>
-                    </li>
-                    <li><a href="#">Another action</a>
-                    </li>
-                    <li><a href="#">Something else here</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- /.panel-heading -->
-    <div class="panel-body">
-        <ul class="list-unstyled">
-			{% for utility in utilities %}
-				<li>
-                    <a href="#">
-					    <i class="fa {{ utility.icon }} fa-fw"></i> {{ utility.title }}
-                    </a>
-				</li>
-			{% endfor %}
-        </ul>
-    </div>
-    <!-- /.panel-body -->
-</div>
+{% extends "./panel.html" %}
+{% block panel_title %}
+    <i class="fa fa-wrench fa-fw"></i> Utilities
+{% endblock %}
+{% block panel_content %}
+    <ul class="list-unstyled">
+        {% for utility in utilities %}
+            <li>
+                <a href="#">
+                    <i class="fa {{ utility.icon }} fa-fw"></i> {{ utility.title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
