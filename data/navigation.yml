@@ -1,41 +1,10 @@
 ---
-    messages:
-        -
-            author: "John Smith"
-            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend..."
-        -
-            author: "Lawrence Taylor"
-            body: "Sed pellentesque mi at diam condimentum semper. Nam enim massa..."
-        -
-            author: "James West"
-            body: "Nullam a odio orci. Duis consequat dui eu arcu imperdiet ultrices."
-        -
-            author: "Margaret Booth"
-            body: "Aenean blandit velit massa, sed porta  eros consequat vitae."
-    notifications:
-        -
-            title: "New Comment"
-            icon: "fa-comment"
-            time: "4 minutes ago"
-        -
-            title: "3 New Jobs"
-            icon: "fa-users"
-            time: "12 minutes ago"
-        -
-            title: "Message sent"
-            icon: "fa-envelope"
-            time: "20 minutes ago"
-        -
-            title: "New Task"
-            icon: "fa-tasks"
-            time: "23 minutes ago"
-    profile_options:
-        -
-            title: "John Smith"
-            icon: "fa-user"
-        -
-            title: "Settings"
-            icon: "fa-gear"
-        -
-            title: "Logout"
-            icon: "fa-sign-out"
+    -
+        title: "Profile"
+        icon: "fa-user"
+    -
+        title: "Settings"
+        icon: "fa-gear"
+    -
+        title: "Logout"
+        icon: "fa-sign-out"

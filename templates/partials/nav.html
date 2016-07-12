@@ -1,69 +1,17 @@
-{% set messages = navigation.messages %}
-{% set notifications = navigation.notifications %}
-{% set profile_options = navigation.profile_options %}
 <ul class="nav navbar-top-links navbar-right">
+
     <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
-        </a>
-        <ul class="dropdown-menu dropdown-messages">
-            {% for message in messages %}
-                <li>
-                    <a href="#">
-                        <div>
-                            <strong>{{ message.author }}</strong>
-                            <span class="pull-right text-muted">
-                                <em>Yesterday</em>
-                            </span>
-                        </div>
-                        <div>{{ message.body }}</div>
-                    </a>
-                </li>
-                <li class="divider"></li>
-            {% endfor %}
-        <!-- /.dropdown-messages -->
-        </ul>
-    </li>
-    <!-- /.dropdown -->
-    <!-- /.dropdown -->
-    <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
-        </a>
-        <ul class="dropdown-menu dropdown-alerts">
-            {% for notification in notifications %}
-                <li>
-                    <a href="#">
-                        <div>
-                            <i class="fa {{ notification.icon }} fa-fw"></i> {{ notification.title }}
-                            <span class="pull-right text-muted small">{{ notification.time }}</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="divider"></li>
-            {% endfor %}
-            <li>
-                <a class="text-center" href="#">
-                    <strong>See All Alerts</strong>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-        <!-- /.dropdown-alerts -->
-    </li>
-    <!-- /.dropdown -->
-    <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+            <img id="avatar" src="https://avatars.io/gravatar/sakohartounian@yahoo.com" alt="" /> Sako Hartounian
         </a>
         <ul class="dropdown-menu dropdown-user">
-            {% for profile_option in profile_options %}
-                {% set title = profile_option.title %}
+            {% for item in navigation %}
+                {% set title = item.title %}
                 {% if title == "Logout" %}
 					<li class="divider"></li>
 				{% endif %}
                 <li>
-                    <a href="#"><i class="fa {{ profile_option.icon }} fa-fw">
+                    <a href="#"><i class="fa {{ item.icon }} fa-fw">
                     </i> {{ title }}
                 </a></li>
             {% endfor %}

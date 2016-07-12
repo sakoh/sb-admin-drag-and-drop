@@ -8213,3 +8213,8 @@ table.dataTable thead .sorting:after {
     color: white; }
     .navbar a.sidebar-top-level:hover, .navbar a.sidebar-top-level:visited, .navbar a.dropdown-toggle:hover, .navbar a.dropdown-toggle:visited, .navbar ul.nav-second-level a:hover, .navbar ul.nav-second-level a:visited, .navbar a.navbar-brand:hover, .navbar a.navbar-brand:visited, #side-menu a.sidebar-top-level:hover, #side-menu a.sidebar-top-level:visited, #side-menu a.dropdown-toggle:hover, #side-menu a.dropdown-toggle:visited, #side-menu ul.nav-second-level a:hover, #side-menu ul.nav-second-level a:visited, #side-menu a.navbar-brand:hover, #side-menu a.navbar-brand:visited, #wrapper a.sidebar-top-level:hover, #wrapper a.sidebar-top-level:visited, #wrapper a.dropdown-toggle:hover, #wrapper a.dropdown-toggle:visited, #wrapper ul.nav-second-level a:hover, #wrapper ul.nav-second-level a:visited, #wrapper a.navbar-brand:hover, #wrapper a.navbar-brand:visited {
       background-color: #4d4d4d; }
+
+#avatar {
+  max-width: 30px;
+  max-height: 30px;
+  border-radius: 50%; }
