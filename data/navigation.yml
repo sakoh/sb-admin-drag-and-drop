@@ -1,25 +1,7 @@
 ---
     -
-        title: Home
-        icon: fa-home
-    -
-        title: Job Manager
-        icon: fa-briefcase
-    -
-        title: Timecards
-        icon: fa-calendar
-    -
-        title: Invoices
-        icon: fa-calculator
-    -
-        title: Reports
-        icon: fa-newspaper-o
-    -
-        title: Projects
-        icon: fa-tasks
-    -
-        title: Charts
-        icon: fa-bar-chart
+        title: John Smith
+        icon: fa-user
     -
         title: Settings
         icon: fa-cog

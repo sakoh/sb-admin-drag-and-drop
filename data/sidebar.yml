@@ -1,6 +1,28 @@
 ---
     -
+        title: Home
+        icon: fa-home
+    -
+        title: Job Manager
+        icon: fa-briefcase
+    -
+        title: Timecards
+        icon: fa-calendar
+    -
+        title: Invoices
+        icon: fa-calculator
+    -
+        title: Reports
+        icon: fa-newspaper-o
+    -
+        title: Projects
+        icon: fa-tasks
+    -
+        title: Charts
+        icon: fa-bar-chart
+    -
         title: To Do List
+        icon: fa-folder
         second_level:
             -
                 title: Pending Job Approval by Others
@@ -28,6 +50,7 @@
                     - Worker 4
     -
         title: Notifications
+        icon: fa-folder
         second_level:
              -
                  title: Pending Task Approval by Others
@@ -53,4 +76,3 @@
                      - Worker 2
                      - Worker 3
                      - Worker 4
- 
