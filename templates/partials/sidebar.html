@@ -12,6 +12,18 @@
                 </div>
                 <!-- /input-group -->
             </li>
+            <li class="hidden-sm hidden-md hidden-lg">
+                <a class="sidebar-top-level" href="#">
+                    <img id="avatar" src="https://avatars.io/gravatar/sakohartounian@yahoo.com" alt="" /> Sako Hartounian <span class="fa arrow"></span></a>
+                </a>
+                <ul class="nav nav-second-level">
+                {% for item in navigation %}
+                    <li>
+                        <a href="#"><i class="fa {{ item.icon }} fa-fw"></i> {{ item.title }}</a>
+                    </li>
+                {% endfor %}
+                </ul>
+            </li>
             {% for item in sidebar %}
             <li>
                 <a class="sidebar-top-level" href="#"><i class="fa {{ item.icon }} fa-fw"></i> {{ item.title }} </span></a>
