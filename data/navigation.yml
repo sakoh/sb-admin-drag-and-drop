@@ -12,23 +12,6 @@
         -
             author: "Margaret Booth"
             body: "Aenean blandit velit massa, sed porta  eros consequat vitae."
-    tasks:
-        -
-            id: 1
-            percent: 40
-            status: "success"
-        -
-            id: 2
-            percent: 20
-            status: "info"
-        -
-            id: 3
-            percent: 60
-            status: "warning"
-        -
-            id: 4
-            percent: 80
-            status: "danger"
     notifications:
         -
             title: "New Comment"
@@ -48,7 +31,7 @@
             time: "23 minutes ago"
     profile_options:
         -
-            title: "User Profile"
+            title: "John Smith"
             icon: "fa-user"
         -
             title: "Settings"

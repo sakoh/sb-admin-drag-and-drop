@@ -1,5 +1,4 @@
 {% set messages = navigation.messages %}
-{% set tasks = navigation.tasks %}
 {% set notifications = navigation.notifications %}
 {% set profile_options = navigation.profile_options %}
 <ul class="nav navbar-top-links navbar-right">
@@ -26,39 +25,6 @@
         </ul>
     </li>
     <!-- /.dropdown -->
-    <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
-        </a>
-        <ul class="dropdown-menu dropdown-tasks">
-            {% for task in tasks %}
-                {% set percent = task.percent %}
-                <li>
-                    <a href="#">
-                        <div>
-                            <p>
-                                <strong>Task {{ task.id }}</strong>
-                                <span class="pull-right text-muted">{{ percent }}% Complete</span>
-                            </p>
-                            <div class="progress progress-striped active">
-                                <div class="progress-bar progress-bar-{{ task.status }}" role="progressbar" aria-valuenow="{{ percent }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ percent }}%">
-                                    <span class="sr-only">{{ percent }}% Complete (success)</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="divider"></li>
-            {% endfor %}
-            <li>
-                <a class="text-center" href="#">
-                    <strong>See All Tasks</strong>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-        <!-- /.dropdown-tasks -->
-    </li>
     <!-- /.dropdown -->
     <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
