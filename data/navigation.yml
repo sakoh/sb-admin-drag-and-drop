@@ -35,8 +35,8 @@
             icon: "fa-comment"
             time: "4 minutes ago"
         -
-            title: "3 New Followers"
-            icon: "fa-twitter"
+            title: "3 New Jobs"
+            icon: "fa-users"
             time: "12 minutes ago"
         -
             title: "Message sent"
@@ -46,10 +46,6 @@
             title: "New Task"
             icon: "fa-tasks"
             time: "23 minutes ago"
-        -
-            title: "Server Rebooted"
-            icon: "fa-upload"
-            time: "30 minutes ago"
     profile_options:
         -
             title: "User Profile"
